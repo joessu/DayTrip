@@ -1,0 +1,6 @@
+{ user: "joessu",
+  pwd: "1ForGondor",
+  roles: [
+    { role: "readwrite", db: "daytriptest" }
+  ]
+}
