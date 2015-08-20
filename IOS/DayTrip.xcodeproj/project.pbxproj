@@ -15,7 +15,6 @@
 		7614C1C318C44A7500336AC7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7614C1C218C44A7500336AC7 /* main.m */; };
 		7614C1C718C44A7500336AC7 /* DTAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7614C1C618C44A7500336AC7 /* DTAppDelegate.m */; };
 		7614C1CA18C44A7500336AC7 /* DTRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7614C1C918C44A7500336AC7 /* DTRootViewController.m */; };
-		7614C1CD18C44A7500336AC7 /* DTDataViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7614C1CC18C44A7500336AC7 /* DTDataViewController.m */; };
 		7614C1D018C44A7500336AC7 /* DTModelController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7614C1CF18C44A7500336AC7 /* DTModelController.m */; };
 		7614C1D318C44A7500336AC7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7614C1D118C44A7500336AC7 /* Main.storyboard */; };
 		7614C1D518C44A7500336AC7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7614C1D418C44A7500336AC7 /* Images.xcassets */; };
@@ -24,8 +23,16 @@
 		7614C1DE18C44A7500336AC7 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7614C1BA18C44A7500336AC7 /* UIKit.framework */; };
 		7614C1E618C44A7500336AC7 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7614C1E418C44A7500336AC7 /* InfoPlist.strings */; };
 		7614C1E818C44A7500336AC7 /* DayTripTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7614C1E718C44A7500336AC7 /* DayTripTests.m */; };
-		768F445D192BE7810061CB72 /* DTHomeScreen.m in Sources */ = {isa = PBXBuildFile; fileRef = 768F445C192BE7810061CB72 /* DTHomeScreen.m */; };
-		768F4466192C05300061CB72 /* DTPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 768F4465192C05300061CB72 /* DTPageViewController.m */; };
+		764EB2B71998AA6B0035D463 /* DTDataViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 764EB2B61998AA6B0035D463 /* DTDataViewController.m */; };
+		76C099101A61D492009F7B1A /* DTDayTrip.m in Sources */ = {isa = PBXBuildFile; fileRef = 76C0990F1A61D492009F7B1A /* DTDayTrip.m */; };
+		76C099121A61ED4A009F7B1A /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76C099111A61ED4A009F7B1A /* MapKit.framework */; };
+		76C099151A61EF25009F7B1A /* DTPOI.m in Sources */ = {isa = PBXBuildFile; fileRef = 76C099141A61EF25009F7B1A /* DTPOI.m */; };
+		76C099181A61F15C009F7B1A /* DTCategories.m in Sources */ = {isa = PBXBuildFile; fileRef = 76C099171A61F15C009F7B1A /* DTCategories.m */; };
+		76C0991B1A61F23B009F7B1A /* DTMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 76C0991A1A61F23B009F7B1A /* DTMapViewController.m */; };
+		76C55FD41A62686400888DF3 /* TagDetailControllerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 76C55FD31A62686400888DF3 /* TagDetailControllerViewController.m */; };
+		76C55FD71A62688500888DF3 /* FilterListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 76C55FD61A62688500888DF3 /* FilterListViewController.m */; };
+		76C55FDA1A6268AF00888DF3 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 76C55FD91A6268AF00888DF3 /* MBProgressHUD.m */; };
+		76CE486D19874FF200B390B6 /* DTLoginData.m in Sources */ = {isa = PBXBuildFile; fileRef = 76CE486C19874FF200B390B6 /* DTLoginData.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,8 +60,6 @@
 		7614C1C618C44A7500336AC7 /* DTAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DTAppDelegate.m; sourceTree = "<group>"; };
 		7614C1C818C44A7500336AC7 /* DTRootViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DTRootViewController.h; sourceTree = "<group>"; };
 		7614C1C918C44A7500336AC7 /* DTRootViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DTRootViewController.m; sourceTree = "<group>"; };
-		7614C1CB18C44A7500336AC7 /* DTDataViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DTDataViewController.h; sourceTree = "<group>"; };
-		7614C1CC18C44A7500336AC7 /* DTDataViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DTDataViewController.m; sourceTree = "<group>"; };
 		7614C1CE18C44A7500336AC7 /* DTModelController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DTModelController.h; sourceTree = "<group>"; };
 		7614C1CF18C44A7500336AC7 /* DTModelController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DTModelController.m; sourceTree = "<group>"; };
 		7614C1D218C44A7500336AC7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -64,10 +69,25 @@
 		7614C1E318C44A7500336AC7 /* DayTripTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "DayTripTests-Info.plist"; sourceTree = "<group>"; };
 		7614C1E518C44A7500336AC7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		7614C1E718C44A7500336AC7 /* DayTripTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DayTripTests.m; sourceTree = "<group>"; };
-		768F445B192BE7810061CB72 /* DTHomeScreen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTHomeScreen.h; sourceTree = "<group>"; };
-		768F445C192BE7810061CB72 /* DTHomeScreen.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTHomeScreen.m; sourceTree = "<group>"; };
-		768F4464192C05300061CB72 /* DTPageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTPageViewController.h; sourceTree = "<group>"; };
-		768F4465192C05300061CB72 /* DTPageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTPageViewController.m; sourceTree = "<group>"; };
+		764EB2B51998AA6B0035D463 /* DTDataViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTDataViewController.h; sourceTree = "<group>"; };
+		764EB2B61998AA6B0035D463 /* DTDataViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTDataViewController.m; sourceTree = "<group>"; };
+		76C0990E1A61D492009F7B1A /* DTDayTrip.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTDayTrip.h; sourceTree = "<group>"; };
+		76C0990F1A61D492009F7B1A /* DTDayTrip.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTDayTrip.m; sourceTree = "<group>"; };
+		76C099111A61ED4A009F7B1A /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		76C099131A61EF25009F7B1A /* DTPOI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTPOI.h; sourceTree = "<group>"; };
+		76C099141A61EF25009F7B1A /* DTPOI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTPOI.m; sourceTree = "<group>"; };
+		76C099161A61F15C009F7B1A /* DTCategories.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTCategories.h; sourceTree = "<group>"; };
+		76C099171A61F15C009F7B1A /* DTCategories.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTCategories.m; sourceTree = "<group>"; };
+		76C099191A61F23B009F7B1A /* DTMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTMapViewController.h; sourceTree = "<group>"; };
+		76C0991A1A61F23B009F7B1A /* DTMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTMapViewController.m; sourceTree = "<group>"; };
+		76C55FD21A62686400888DF3 /* TagDetailControllerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TagDetailControllerViewController.h; sourceTree = "<group>"; };
+		76C55FD31A62686400888DF3 /* TagDetailControllerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TagDetailControllerViewController.m; sourceTree = "<group>"; };
+		76C55FD51A62688500888DF3 /* FilterListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FilterListViewController.h; sourceTree = "<group>"; };
+		76C55FD61A62688500888DF3 /* FilterListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FilterListViewController.m; sourceTree = "<group>"; };
+		76C55FD81A6268AF00888DF3 /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
+		76C55FD91A6268AF00888DF3 /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
+		76CE486B19874FF200B390B6 /* DTLoginData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DTLoginData.h; path = ../DTLoginData.h; sourceTree = "<group>"; };
+		76CE486C19874FF200B390B6 /* DTLoginData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DTLoginData.m; path = ../DTLoginData.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +97,7 @@
 			files = (
 				7614C1B918C44A7500336AC7 /* CoreGraphics.framework in Frameworks */,
 				7614C1BB18C44A7500336AC7 /* UIKit.framework in Frameworks */,
+				76C099121A61ED4A009F7B1A /* MapKit.framework in Frameworks */,
 				7614C1B718C44A7500336AC7 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -118,6 +139,7 @@
 		7614C1B518C44A7500336AC7 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				76C099111A61ED4A009F7B1A /* MapKit.framework */,
 				7614C1B618C44A7500336AC7 /* Foundation.framework */,
 				7614C1B818C44A7500336AC7 /* CoreGraphics.framework */,
 				7614C1BA18C44A7500336AC7 /* UIKit.framework */,
@@ -129,21 +151,15 @@
 		7614C1BC18C44A7500336AC7 /* DayTrip */ = {
 			isa = PBXGroup;
 			children = (
-				7614C1C518C44A7500336AC7 /* DTAppDelegate.h */,
-				7614C1C618C44A7500336AC7 /* DTAppDelegate.m */,
-				7614C1C818C44A7500336AC7 /* DTRootViewController.h */,
-				7614C1C918C44A7500336AC7 /* DTRootViewController.m */,
-				7614C1CB18C44A7500336AC7 /* DTDataViewController.h */,
-				7614C1CC18C44A7500336AC7 /* DTDataViewController.m */,
-				7614C1CE18C44A7500336AC7 /* DTModelController.h */,
-				7614C1CF18C44A7500336AC7 /* DTModelController.m */,
+				76C55FC81A6222C200888DF3 /* 3rdParty */,
+				764EB2BD1998AB0C0035D463 /* DayTripDetailView */,
+				764EB2B81998AA880035D463 /* TabBarNavigator */,
+				764EB2B41998A9C70035D463 /* LoginView */,
+				764EB2B31998A9A30035D463 /* Main */,
+				764EB2B21998A9760035D463 /* Model */,
 				7614C1D118C44A7500336AC7 /* Main.storyboard */,
 				7614C1D418C44A7500336AC7 /* Images.xcassets */,
 				7614C1BD18C44A7500336AC7 /* Supporting Files */,
-				768F445B192BE7810061CB72 /* DTHomeScreen.h */,
-				768F4464192C05300061CB72 /* DTPageViewController.h */,
-				768F4465192C05300061CB72 /* DTPageViewController.m */,
-				768F445C192BE7810061CB72 /* DTHomeScreen.m */,
 			);
 			path = DayTrip;
 			sourceTree = "<group>";
@@ -175,6 +191,104 @@
 				7614C1E418C44A7500336AC7 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		764EB2B21998A9760035D463 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				7614C1CE18C44A7500336AC7 /* DTModelController.h */,
+				7614C1CF18C44A7500336AC7 /* DTModelController.m */,
+				76C0990E1A61D492009F7B1A /* DTDayTrip.h */,
+				76C0990F1A61D492009F7B1A /* DTDayTrip.m */,
+				76C099131A61EF25009F7B1A /* DTPOI.h */,
+				76C099141A61EF25009F7B1A /* DTPOI.m */,
+				76C099161A61F15C009F7B1A /* DTCategories.h */,
+				76C099171A61F15C009F7B1A /* DTCategories.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		764EB2B31998A9A30035D463 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				764EB2B51998AA6B0035D463 /* DTDataViewController.h */,
+				764EB2B61998AA6B0035D463 /* DTDataViewController.m */,
+				7614C1C518C44A7500336AC7 /* DTAppDelegate.h */,
+				7614C1C618C44A7500336AC7 /* DTAppDelegate.m */,
+			);
+			name = Main;
+			sourceTree = "<group>";
+		};
+		764EB2B41998A9C70035D463 /* LoginView */ = {
+			isa = PBXGroup;
+			children = (
+				76CE486B19874FF200B390B6 /* DTLoginData.h */,
+				76CE486C19874FF200B390B6 /* DTLoginData.m */,
+				7614C1C818C44A7500336AC7 /* DTRootViewController.h */,
+				7614C1C918C44A7500336AC7 /* DTRootViewController.m */,
+			);
+			name = LoginView;
+			sourceTree = "<group>";
+		};
+		764EB2B81998AA880035D463 /* TabBarNavigator */ = {
+			isa = PBXGroup;
+			children = (
+				764EB2BC1998AAD20035D463 /* StartDayTripView */,
+				764EB2BB1998AAC50035D463 /* SeachDayTripsView */,
+				764EB2BA1998AAAB0035D463 /* MyDayTripsView */,
+				764EB2B91998AA9C0035D463 /* NewsFeedView */,
+			);
+			name = TabBarNavigator;
+			sourceTree = "<group>";
+		};
+		764EB2B91998AA9C0035D463 /* NewsFeedView */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = NewsFeedView;
+			sourceTree = "<group>";
+		};
+		764EB2BA1998AAAB0035D463 /* MyDayTripsView */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = MyDayTripsView;
+			sourceTree = "<group>";
+		};
+		764EB2BB1998AAC50035D463 /* SeachDayTripsView */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = SeachDayTripsView;
+			sourceTree = "<group>";
+		};
+		764EB2BC1998AAD20035D463 /* StartDayTripView */ = {
+			isa = PBXGroup;
+			children = (
+				76C55FD51A62688500888DF3 /* FilterListViewController.h */,
+				76C55FD61A62688500888DF3 /* FilterListViewController.m */,
+				76C55FD21A62686400888DF3 /* TagDetailControllerViewController.h */,
+				76C55FD31A62686400888DF3 /* TagDetailControllerViewController.m */,
+				76C099191A61F23B009F7B1A /* DTMapViewController.h */,
+				76C0991A1A61F23B009F7B1A /* DTMapViewController.m */,
+			);
+			name = StartDayTripView;
+			sourceTree = "<group>";
+		};
+		764EB2BD1998AB0C0035D463 /* DayTripDetailView */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = DayTripDetailView;
+			sourceTree = "<group>";
+		};
+		76C55FC81A6222C200888DF3 /* 3rdParty */ = {
+			isa = PBXGroup;
+			children = (
+				76C55FD81A6268AF00888DF3 /* MBProgressHUD.h */,
+				76C55FD91A6268AF00888DF3 /* MBProgressHUD.m */,
+			);
+			name = 3rdParty;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -225,6 +339,13 @@
 				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = "Joseph Andresen";
 				TargetAttributes = {
+					7614C1B218C44A7500336AC7 = {
+						SystemCapabilities = {
+							com.apple.Maps.iOS = {
+								enabled = 1;
+							};
+						};
+					};
 					7614C1D918C44A7500336AC7 = {
 						TestTargetID = 7614C1B218C44A7500336AC7;
 					};
@@ -276,13 +397,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				7603C6BC18D690440022AC2E /* DTEncodeImageURL.m in Sources */,
+				764EB2B71998AA6B0035D463 /* DTDataViewController.m in Sources */,
 				7614C1C718C44A7500336AC7 /* DTAppDelegate.m in Sources */,
+				76C099151A61EF25009F7B1A /* DTPOI.m in Sources */,
+				76C55FD71A62688500888DF3 /* FilterListViewController.m in Sources */,
+				76C099101A61D492009F7B1A /* DTDayTrip.m in Sources */,
 				7614C1CA18C44A7500336AC7 /* DTRootViewController.m in Sources */,
-				768F445D192BE7810061CB72 /* DTHomeScreen.m in Sources */,
+				76CE486D19874FF200B390B6 /* DTLoginData.m in Sources */,
+				76C55FD41A62686400888DF3 /* TagDetailControllerViewController.m in Sources */,
+				76C099181A61F15C009F7B1A /* DTCategories.m in Sources */,
 				7614C1D018C44A7500336AC7 /* DTModelController.m in Sources */,
-				7614C1CD18C44A7500336AC7 /* DTDataViewController.m in Sources */,
-				768F4466192C05300061CB72 /* DTPageViewController.m in Sources */,
 				7614C1C318C44A7500336AC7 /* main.m in Sources */,
+				76C0991B1A61F23B009F7B1A /* DTMapViewController.m in Sources */,
+				76C55FDA1A6268AF00888DF3 /* MBProgressHUD.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

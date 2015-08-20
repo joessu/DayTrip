@@ -5,36 +5,36 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>C7C9294A-3FB6-477A-B69D-EC6DD1D6FE4F</string>
+	<string>6C5DB157-DFA8-41CA-8844-F1D6EF635C5D</string>
 	<key>IDESourceControlProjectName</key>
 	<string>DayTrip</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>346BC606B053B46F8600DD54A2CC385C05391EC2</key>
-		<string>https://github.com/joessu/DayTrip.git</string>
+		<key>4EE6470D35285E70D2F97AAE78D1DEF3978ADAF1</key>
+		<string>pavlov.bacomatic.org:daytrip</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>IOS/DayTrip.xcodeproj</string>
+	<string>DayTrip.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>346BC606B053B46F8600DD54A2CC385C05391EC2</key>
-		<string>../../..</string>
+		<key>4EE6470D35285E70D2F97AAE78D1DEF3978ADAF1</key>
+		<string>../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>https://github.com/joessu/DayTrip.git</string>
+	<string>pavlov.bacomatic.org:daytrip</string>
 	<key>IDESourceControlProjectVersion</key>
 	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>346BC606B053B46F8600DD54A2CC385C05391EC2</string>
+	<string>4EE6470D35285E70D2F97AAE78D1DEF3978ADAF1</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>346BC606B053B46F8600DD54A2CC385C05391EC2</string>
+			<string>4EE6470D35285E70D2F97AAE78D1DEF3978ADAF1</string>
 			<key>IDESourceControlWCCName</key>
-			<string>DayTrip</string>
+			<string>daytrip</string>
 		</dict>
 	</array>
 </dict>

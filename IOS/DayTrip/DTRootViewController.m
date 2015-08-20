@@ -1,7 +1,16 @@
+//
+//  DTRootViewController.m
+//  DayTrip
+//
+//  Created by Joe Andresen on 3/2/14.
+//  Copyright (c) 2014 Joseph Andresen. All rights reserved.
+//
+
 #import "DTRootViewController.h"
 #import "DTModelController.h"
-
+#import "JFCommon-master/JFBCrypt.h"
 #import "DTDataViewController.h"
+#import "DTLoginData.h"
 
 @interface DTRootViewController ()
 @property (readonly, strong, nonatomic) DTModelController *modelController;
@@ -83,13 +92,6 @@ static NSString* testLoginPassword = @"test";
     [NSTimer scheduledTimerWithTimeInterval:2.0 target:self selector:@selector(newFlavorText) userInfo:nil repeats:NO];
 }
 
--(void)setConnectionData:(NSMutableData*)connData
-{
-    
-    
-}
-
-
 - (NSString *)typeDisplayName {
     return [[self class] typeDisplayNames][@(self.type)];
 }
@@ -100,58 +102,64 @@ static NSString* testLoginPassword = @"test";
         return;
     }
     
-    
-    
     [NSTimer scheduledTimerWithTimeInterval:2.5 target:self selector:@selector(checkLoginCredentials) userInfo:nil repeats:NO];
     
+    NSString* username = self.loginName.text;
     NSString* password = self.passwordTextBox.text;
     
-    [super performSegueWithIdentifier:@"LoginSegue" sender:self];
-
+    DTLoginData* logindata = [[DTLoginData alloc] init];
+    [logindata setUsername:username];
+    [logindata setPassword:password];
+    NSError* error = nil;
     
-    //NSString *salt = [JFBCrypt generateSaltWithNumberOfRounds: 10];
-    //NSString *hashedPassword = [JFBCrypt hashPassword: password withSalt: salt];
-    
-    //NSLog(hashedPassword);
-    
-    //NSURL *msgURL = [NSURL URLWithString:@"https://192.168.2.12:8443"];
-    //[self httpsLogin: msgURL];
-    
-    //NSURLRequest *msgRequest = [NSURLRequest requestWithURL:msgURL cachePolicy:NSURLCacheStorageAllowed timeoutInterval:5.0];
-    }
+    NSData* data = [NSJSONSerialization  dataWithJSONObject:logindata.loginData options:0 error:&error];
+    NSURL *msgURL = [NSURL URLWithString:@"https://127.0.0.1:8000"];
+    [self httpsLogin: msgURL data:data];
+}
 
 -(void) checkLoginCredentials
 {
     
 }
 
--(void) httpsLogin: (NSURL *) link
+-(void) httpsLogin:(NSURL *)link data:(NSData*)data
 {
+    unsigned long length = [data length];
+    NSLog(@"length: %lul",length);
     NSMutableURLRequest * request = [NSMutableURLRequest requestWithURL:link];
     [request addValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
-    [request setHTTPMethod:@"GET"];
-    [[NSURLConnection alloc]initWithRequest:request delegate:self startImmediately:YES];
+    [request setHTTPMethod:@"POST"];
+    [request setValue:[NSString stringWithFormat:@"%lu", (unsigned long)[data length]] forHTTPHeaderField:@"Content-Length"];
+    [request setHTTPBody: data];
+    
+    // Must set a delegate here or we can't test with self-signed certificates
+    NSURLSession *session = [NSURLSession sessionWithConfiguration:[NSURLSessionConfiguration defaultSessionConfiguration] delegate:self delegateQueue:[NSOperationQueue mainQueue]];
+    
+    
+    [[session dataTaskWithRequest:request completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
+        NSHTTPURLResponse *httpResponse = (NSHTTPURLResponse *) response;
+        NSDictionary *dictionary = [httpResponse allHeaderFields];
+        NSLog(@"%@", dictionary[@"Content-Type"]);
+        NSLog(@"%@", [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding]);
+    }] resume];
+    
+    [super performSegueWithIdentifier:@"LoginSegue" sender:self];
+
 }
 
-- (BOOL)connection:(NSURLConnection *)connection canAuthenticateAgainstProtectionSpace:(NSURLProtectionSpace *)protectionSpace
+// FIXME: Should be able to remove when we get a CA signed SSL cert
+- (void)URLSession:(NSURLSession *)session
+      didReceiveChallenge:(NSURLAuthenticationChallenge *)challenge
+        completionHandler:(void (^)(NSURLSessionAuthChallengeDisposition, NSURLCredential *))completionHandler
 {
-    return [protectionSpace.authenticationMethod isEqualToString:NSURLAuthenticationMethodServerTrust];
-}
-
-- (void)connection:(NSURLConnection *)connection didReceiveAuthenticationChallenge:(NSURLAuthenticationChallenge *)challenge
-{
+    NSLog(@"URLSession didReceiveChallenge: %@", challenge);
     
-    [challenge.sender useCredential:[NSURLCredential credentialForTrust:challenge.protectionSpace.serverTrust] forAuthenticationChallenge:challenge];
-    
-    [challenge.sender continueWithoutCredentialForAuthenticationChallenge:challenge];
-}
-
-- (void)connection:(NSURLConnection *)connection didReceiveData:(NSData *)data {
-    NSLog(@"recieved");
-    
-    NSString *s = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
-    NSLog(@"%@", s);
-    
+    if([challenge.protectionSpace.authenticationMethod isEqualToString:NSURLAuthenticationMethodServerTrust]){
+        if([challenge.protectionSpace.host isEqualToString:@"127.0.0.1"]){
+            NSURLCredential *credential = [NSURLCredential credentialForTrust:challenge.protectionSpace.serverTrust];
+            completionHandler(NSURLSessionAuthChallengeUseCredential,credential);
+        }
+    }
 }
 
 - (void)newFlavorText
@@ -167,3 +175,5 @@ static NSString* testLoginPassword = @"test";
 }
 
 @end
+
+

@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface DTRootViewController : UIViewController <UIPageViewControllerDelegate>
+@interface DTRootViewController : UIViewController <UIPageViewControllerDelegate, NSURLSessionDelegate>
 
 typedef NS_ENUM(NSUInteger, DayTripProtocol) {
     registerRequest = 0,
@@ -24,6 +24,7 @@ typedef NS_ENUM(NSUInteger, DayTripProtocol) {
 @property (nonatomic) DayTripProtocol type;
 @property (strong, nonatomic) UIPageViewController *pageViewController;
 @property (weak, nonatomic) IBOutlet UITextField *passwordTextBox;
+@property (weak, nonatomic) IBOutlet UITextField *loginName;
 @property (weak, nonatomic) IBOutlet UILabel *flavorTextLabel;
 @property (strong, nonatomic) UIStoryboardSegue *LoginSegue;
 
@@ -35,6 +36,6 @@ typedef NS_ENUM(NSUInteger, DayTripProtocol) {
 
 -(IBAction)loginRequest:(id)sender;
 -(void)setConnectionData:(NSMutableData*)connData;
--(void)httpsLogin:(NSURL*)link;
+-(void)httpsLogin:(NSURL*)link data:(NSData*)data;
 
 @end

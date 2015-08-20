@@ -10,8 +10,15 @@
 
 @implementation DTAppDelegate
 
++ (DTAppDelegate *)appDelegate
+{
+    return [UIApplication sharedApplication].delegate;
+}
+
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    self.daytrip = [[DTDayTrip alloc] init];
+    [self.daytrip import];
     // Override point for customization after application launch.
     return YES;
 }
